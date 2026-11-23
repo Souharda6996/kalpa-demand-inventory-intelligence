@@ -1,0 +1,58 @@
+name: CI
+on: [push, pull_request]
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync --all-packages
+      - run: uv run ruff check .
+      - run: uv run mypy services/api/kalpa_api services/worker/kalpa_worker packages/ml/kalpa_ml
+      # coverage floors from the project plan: >= 80 % for the API, >= 70 % for the ML package
+      - run: uv run pytest -q --cov=services/api/kalpa_api --cov-report=term --cov-fail-under=80 services
+      - run: uv run pytest -q --cov=packages/ml/kalpa_ml --cov-report=term --cov-fail-under=70 packages
+
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: pnpm }
+      - name: Python dependency audit (fails on any known vulnerability)
+        run: |
+          uv export --format requirements-txt --no-hashes --all-packages --no-emit-workspace | grep -v '^-e' > reqs.txt
+          uvx pip-audit -r reqs.txt --no-deps --disable-pip
+      - name: JavaScript dependency audit (fails on high or critical)
+        run: pnpm install --frozen-lockfile && pnpm audit --audit-level high
+      - name: Secrets scan (fails on a finding that is not in the reviewed baseline)
+        run: |
+          uvx detect-secrets scan --all-files --exclude-files '(\.venv|node_modules|\.next|^data/|^artifacts/|pnpm-lock|uv\.lock|openapi\.json|api-schema|test-results)' > scan.json
+          python - <<'PY'
+          import json
+          found = {(f, x["type"]) for f, v in json.load(open("scan.json"))["results"].items() for x in v}
+          known = {(f, x["type"]) for f, v in json.load(open("artifacts/security/secrets-scan.json"))["results"].items() for x in v}
+          new = sorted(found - known)
+          print("new secret candidates:", new)
+          raise SystemExit(1 if new else 0)
+          PY
+
+  web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: pnpm }
+      - run: uv sync --all-packages
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm gen:api
+      - run: pnpm lint
+      - run: pnpm typecheck
+      - run: pnpm test
+      # Playwright journeys need the full stack (Postgres, Redis, API, worker, web); they are run locally before releases:
+      #   see docs/PROGRESS.md for the specs and how to start the stack (scripts/start_demo.ps1).

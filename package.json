@@ -1,0 +1,11 @@
+{
+  "name": "kalpa",
+  "private": true,
+  "packageManager": "pnpm@12.21.0",
+  "scripts": {
+    "gen:api": "pnpm --filter web gen:api",
+    "lint": "pnpm --filter web lint",
+    "typecheck": "pnpm --filter web typecheck",
+    "test": "pnpm --filter web test"
+  }
+}

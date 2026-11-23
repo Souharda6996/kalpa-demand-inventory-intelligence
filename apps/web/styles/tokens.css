@@ -1,0 +1,73 @@
+/* Kalpa design tokens. indigo = actual/operational, saffron = predicted/AI. All text pairs meet WCAG AA (axe-checked). */
+:root {
+  --bg: #f5f6fa;
+  --surface: #ffffff;
+  --surface-2: #f0f2f8;
+  --surface-3: #e8ebf4;
+  --border: #e4e7f0;
+  --border-strong: #d2d8e6;
+  --text: #0d1220;
+  --text-muted: #566077;
+
+  --primary: #3b4bdb;
+  --primary-hover: #3040c4;
+  --primary-soft: rgba(59, 75, 219, 0.09);
+  --primary-text: #3b4bdb; /* primary-coloured TEXT (links, active nav) */
+  --primary-fg: #ffffff;
+
+  --accent-ai: #f2994a; /* brand saffron: lines, bands, fills (not for text on light) */
+  --accent-ai-text: #b45309; /* saffron for TEXT: 5.0:1 on white */
+  --accent-soft: rgba(242, 153, 74, 0.14);
+
+  --success: #137a52;
+  --warning: #8a5a00;
+  --danger: #c03030;
+  --success-soft: rgba(19, 122, 82, 0.1);
+  --danger-soft: rgba(192, 48, 48, 0.09);
+
+  --band: rgba(242, 153, 74, 0.18);
+  --radius: 12px;
+  --ring: rgba(59, 75, 219, 0.45);
+  --shadow-sm: 0 1px 2px rgba(13, 18, 32, 0.05);
+  --shadow: 0 1px 2px rgba(13, 18, 32, 0.05), 0 6px 20px rgba(13, 18, 32, 0.06);
+  --shadow-lg: 0 18px 50px rgba(13, 18, 32, 0.14);
+  --hero-glow:
+    radial-gradient(60% 55% at 78% 0%, rgba(59, 75, 219, 0.16), transparent 70%),
+    radial-gradient(45% 45% at 8% 8%, rgba(242, 153, 74, 0.18), transparent 70%);
+}
+
+:root[data-theme="dark"] {
+  --bg: #090d17;
+  --surface: #0f1524;
+  --surface-2: #151c2e;
+  --surface-3: #1b2438;
+  --border: #1f2840;
+  --border-strong: #2b3654;
+  --text: #e8ebf4;
+  --text-muted: #94a0b8;
+
+  --primary: #7482ff;
+  --primary-hover: #8794ff;
+  --primary-soft: rgba(116, 130, 255, 0.15);
+  --primary-text: #a3adff; /* lighter for AA on the tinted dark surfaces */
+  --primary-fg: #090d17; /* dark text on the lighter dark-mode indigo: 6.4:1 */
+
+  --accent-ai: #f6ad62;
+  --accent-ai-text: #f6ad62;
+  --accent-soft: rgba(246, 173, 98, 0.16);
+
+  --success: #3dd598;
+  --warning: #f2b544;
+  --danger: #ff7b7b;
+  --success-soft: rgba(61, 213, 152, 0.12);
+  --danger-soft: rgba(255, 123, 123, 0.12);
+
+  --band: rgba(246, 173, 98, 0.2);
+  --ring: rgba(116, 130, 255, 0.55);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 22px 60px rgba(0, 0, 0, 0.55);
+  --hero-glow:
+    radial-gradient(60% 55% at 78% 0%, rgba(116, 130, 255, 0.22), transparent 70%),
+    radial-gradient(45% 45% at 8% 8%, rgba(246, 173, 98, 0.12), transparent 70%);
+}

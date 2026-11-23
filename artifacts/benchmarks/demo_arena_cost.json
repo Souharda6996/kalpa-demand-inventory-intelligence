@@ -1,0 +1,45 @@
+{
+ "source": "GET /models/arena of the demo tenant (Bengaluru FreshMart, synthetic)",
+ "folds": 2,
+ "models": [
+  {
+   "model_name": "tft",
+   "is_champion": true,
+   "wape": 0.45146314686876765,
+   "mase": 0.8066817265328734,
+   "bias": -0.13302785961375535,
+   "pinball": 0.8520548767748256,
+   "coverage80": 0.7761725935009197,
+   "cost": 105130.08081506843,
+   "fill_rate": 0.9915852265515929,
+   "stockout_days": 80.0,
+   "avg_inventory": 92.35366120697205
+  },
+  {
+   "model_name": "lightgbm_tweedie",
+   "is_champion": false,
+   "wape": 0.4752964590580086,
+   "mase": 0.9337260611397848,
+   "bias": -0.024250910767964047,
+   "pinball": 0.9462535410907771,
+   "coverage80": 0.9027380952380952,
+   "cost": 131637.98141291583,
+   "fill_rate": 0.9921098324140152,
+   "stockout_days": 112.0,
+   "avg_inventory": 86.77284013605444
+  },
+  {
+   "model_name": "seasonal_naive",
+   "is_champion": false,
+   "wape": 0.5690520405799995,
+   "mase": 1.014928265599599,
+   "bias": -0.06861396907861532,
+   "pinball": 1.1637244772171154,
+   "coverage80": 0.9211607142857143,
+   "cost": 149867.2251183952,
+   "fill_rate": 0.990002495705918,
+   "stockout_days": 112.0,
+   "avg_inventory": 94.22737244897958
+  }
+ ]
+}

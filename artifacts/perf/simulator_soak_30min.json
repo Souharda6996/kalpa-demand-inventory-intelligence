@@ -1,0 +1,533 @@
+{
+ "result": {
+  "minutes_requested": 30,
+  "job_status": "succeeded",
+  "job_error": null,
+  "final": {
+   "available": true,
+   "running": false,
+   "job_id": "00cf9687-4f1c-4bf0-a6e0-732c7fa88db2",
+   "sim_date": "2026-01-30",
+   "clock": "18:44",
+   "day_index": 29,
+   "checkouts": 11013,
+   "units": 33250,
+   "revenue": 4683267.73,
+   "lost_units": 116367,
+   "errors": 0,
+   "multiplier": 1.0,
+   "day_seconds": 60,
+   "started_at": "2026-11-22T18:56:41.348956+00:00"
+  },
+  "min_on_hand_ever_sampled": 0,
+  "sse_events": 12806,
+  "sse_max_gap_seconds": 1.2,
+  "session_refreshes": 2
+ },
+ "samples": [
+  {
+   "t": 32,
+   "running": true,
+   "checkouts": 794,
+   "units": 2481,
+   "lost": 0,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 65,
+   "running": true,
+   "checkouts": 1697,
+   "units": 5731,
+   "lost": 0,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 97,
+   "running": true,
+   "checkouts": 2495,
+   "units": 8205,
+   "lost": 0,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 129,
+   "running": true,
+   "checkouts": 3360,
+   "units": 11172,
+   "lost": 12,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 161,
+   "running": true,
+   "checkouts": 4331,
+   "units": 14373,
+   "lost": 16,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 194,
+   "running": true,
+   "checkouts": 5220,
+   "units": 17527,
+   "lost": 33,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 226,
+   "running": true,
+   "checkouts": 6098,
+   "units": 20446,
+   "lost": 151,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 258,
+   "running": true,
+   "checkouts": 6805,
+   "units": 22846,
+   "lost": 495,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 291,
+   "running": true,
+   "checkouts": 7458,
+   "units": 24776,
+   "lost": 830,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 323,
+   "running": true,
+   "checkouts": 8008,
+   "units": 26317,
+   "lost": 1331,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 355,
+   "running": true,
+   "checkouts": 8511,
+   "units": 27697,
+   "lost": 2281,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 387,
+   "running": true,
+   "checkouts": 8873,
+   "units": 28694,
+   "lost": 3330,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 420,
+   "running": true,
+   "checkouts": 9169,
+   "units": 29553,
+   "lost": 5309,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 452,
+   "running": true,
+   "checkouts": 9354,
+   "units": 29995,
+   "lost": 7191,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 484,
+   "running": true,
+   "checkouts": 9489,
+   "units": 30343,
+   "lost": 10231,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 517,
+   "running": true,
+   "checkouts": 9617,
+   "units": 30646,
+   "lost": 12332,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 549,
+   "running": true,
+   "checkouts": 9725,
+   "units": 30894,
+   "lost": 15175,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 581,
+   "running": true,
+   "checkouts": 9816,
+   "units": 31104,
+   "lost": 18015,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 613,
+   "running": true,
+   "checkouts": 9882,
+   "units": 31245,
+   "lost": 21215,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 646,
+   "running": true,
+   "checkouts": 9950,
+   "units": 31393,
+   "lost": 24002,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 678,
+   "running": true,
+   "checkouts": 9993,
+   "units": 31480,
+   "lost": 26749,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 710,
+   "running": true,
+   "checkouts": 10090,
+   "units": 31673,
+   "lost": 28840,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 743,
+   "running": true,
+   "checkouts": 10150,
+   "units": 31789,
+   "lost": 30819,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 775,
+   "running": true,
+   "checkouts": 10222,
+   "units": 31922,
+   "lost": 32913,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 807,
+   "running": true,
+   "checkouts": 10285,
+   "units": 32036,
+   "lost": 34935,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 839,
+   "running": true,
+   "checkouts": 10329,
+   "units": 32128,
+   "lost": 37579,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 872,
+   "running": true,
+   "checkouts": 10370,
+   "units": 32196,
+   "lost": 39827,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 904,
+   "running": true,
+   "checkouts": 10400,
+   "units": 32251,
+   "lost": 43206,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 936,
+   "running": true,
+   "checkouts": 10434,
+   "units": 32314,
+   "lost": 45433,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 969,
+   "running": true,
+   "checkouts": 10462,
+   "units": 32364,
+   "lost": 48605,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 1001,
+   "running": true,
+   "checkouts": 10492,
+   "units": 32414,
+   "lost": 51279,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 1033,
+   "running": true,
+   "checkouts": 10517,
+   "units": 32454,
+   "lost": 54756,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 1065,
+   "running": true,
+   "checkouts": 10543,
+   "units": 32498,
+   "lost": 57354,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 1098,
+   "running": true,
+   "checkouts": 10563,
+   "units": 32542,
+   "lost": 60305,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 1130,
+   "running": true,
+   "checkouts": 10603,
+   "units": 32617,
+   "lost": 62393,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 1162,
+   "running": true,
+   "checkouts": 10655,
+   "units": 32701,
+   "lost": 64499,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 1195,
+   "running": true,
+   "checkouts": 10694,
+   "units": 32771,
+   "lost": 66611,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 1227,
+   "running": true,
+   "checkouts": 10728,
+   "units": 32826,
+   "lost": 68721,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 1259,
+   "running": true,
+   "checkouts": 10753,
+   "units": 32867,
+   "lost": 71327,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 1291,
+   "running": true,
+   "checkouts": 10777,
+   "units": 32900,
+   "lost": 73784,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 1324,
+   "running": true,
+   "checkouts": 10800,
+   "units": 32939,
+   "lost": 76999,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 1356,
+   "running": true,
+   "checkouts": 10820,
+   "units": 32965,
+   "lost": 79401,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 1388,
+   "running": true,
+   "checkouts": 10835,
+   "units": 32986,
+   "lost": 82688,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 1421,
+   "running": true,
+   "checkouts": 10856,
+   "units": 33020,
+   "lost": 85249,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 1453,
+   "running": true,
+   "checkouts": 10872,
+   "units": 33048,
+   "lost": 88911,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 1485,
+   "running": true,
+   "checkouts": 10886,
+   "units": 33068,
+   "lost": 91396,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 1517,
+   "running": true,
+   "checkouts": 10901,
+   "units": 33088,
+   "lost": 94506,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 1550,
+   "running": true,
+   "checkouts": 10911,
+   "units": 33106,
+   "lost": 96611,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 1582,
+   "running": true,
+   "checkouts": 10925,
+   "units": 33125,
+   "lost": 98862,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 1614,
+   "running": true,
+   "checkouts": 10940,
+   "units": 33145,
+   "lost": 100949,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 1646,
+   "running": true,
+   "checkouts": 10958,
+   "units": 33173,
+   "lost": 103180,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 1679,
+   "running": true,
+   "checkouts": 10973,
+   "units": 33194,
+   "lost": 105678,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 1711,
+   "running": true,
+   "checkouts": 10987,
+   "units": 33215,
+   "lost": 108113,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 1743,
+   "running": true,
+   "checkouts": 10994,
+   "units": 33227,
+   "lost": 111338,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 1776,
+   "running": true,
+   "checkouts": 11007,
+   "units": 33244,
+   "lost": 113893,
+   "errors": 0,
+   "min_on_hand": 0
+  },
+  {
+   "t": 1808,
+   "running": false,
+   "checkouts": 0,
+   "units": 0,
+   "lost": 0,
+   "errors": 0,
+   "min_on_hand": 0
+  }
+ ]
+}

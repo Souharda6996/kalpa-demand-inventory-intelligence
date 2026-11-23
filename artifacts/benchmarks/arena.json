@@ -1,0 +1,214 @@
+{
+  "dataset": {
+    "name": "Bengaluru FreshMart (SYNTHETIC, seed 42)",
+    "is_m5": false,
+    "series": 600,
+    "rows": 438600,
+    "start": "2024-01-01",
+    "end": "2025-12-31",
+    "note": "M5 was not available; do not cite as M5 results."
+  },
+  "protocol": {
+    "horizon_days": 28,
+    "folds": 3,
+    "gap": 0,
+    "calibration": "split-conformal per category, fold k calibrated with fold k-1 residuals (fold 0 uncalibrated)"
+  },
+  "tft": {
+    "lookback": 56,
+    "d_model": 32,
+    "heads": 2,
+    "epochs_max": 8,
+    "device": "cpu",
+    "torch": "2.15.0+cpu"
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "cutoff": "2025-10-08",
+      "start": "2025-10-09",
+      "end": "2025-11-05",
+      "series": 600,
+      "series_skipped": 0,
+      "models": {
+        "seasonal_naive": {
+          "wape": 0.5393586005830904,
+          "bias": -0.08493115703006959,
+          "series_scored": 600.0,
+          "mase": 1.0087387697268346,
+          "pinball": 1.4723501722133967,
+          "coverage80": 0.9202380952380952,
+          "coverage80_cal": null
+        },
+        "auto_ets": {
+          "wape": 0.41030448070863934,
+          "bias": -0.032284712460719775,
+          "series_scored": 600.0,
+          "mase": 0.7859100874326889,
+          "pinball": 1.1093062078526144,
+          "coverage80": 0.8183928571428571,
+          "coverage80_cal": null
+        },
+        "lightgbm_tweedie": {
+          "wape": 0.4110669136237235,
+          "bias": -0.0042470235805534984,
+          "series_scored": 600.0,
+          "mase": 0.7910185702807299,
+          "pinball": 1.1008087709755818,
+          "coverage80": 0.8597619047619047,
+          "coverage80_cal": null
+        },
+        "tft": {
+          "wape": 0.40401038601955797,
+          "bias": -0.1346124049541916,
+          "series_scored": 600.0,
+          "mase": 0.7626071407566477,
+          "pinball": 1.0893798453944965,
+          "coverage80": 0.7745833333333333,
+          "coverage80_cal": null
+        }
+      },
+      "stat_seconds": 146.42,
+      "lightgbm_seconds": 12.76,
+      "tft_seconds": 194.11
+    },
+    {
+      "fold": 1,
+      "cutoff": "2025-11-05",
+      "start": "2025-11-06",
+      "end": "2025-12-03",
+      "series": 600,
+      "series_skipped": 0,
+      "models": {
+        "seasonal_naive": {
+          "wape": 0.5376968054553221,
+          "bias": -0.004344816413096308,
+          "series_scored": 600.0,
+          "mase": 0.9591726215584725,
+          "pinball": 1.4147561050865445,
+          "coverage80": 0.9336904761904762,
+          "coverage80_cal": 0.8763095238095238
+        },
+        "auto_ets": {
+          "wape": 0.39516663307435984,
+          "bias": 0.011113084992027344,
+          "series_scored": 600.0,
+          "mase": 0.7250170758079926,
+          "pinball": 1.004031378247811,
+          "coverage80": 0.8398214285714286,
+          "coverage80_cal": 0.8364285714285714
+        },
+        "lightgbm_tweedie": {
+          "wape": 0.39811431459964447,
+          "bias": 0.0057420492029054415,
+          "series_scored": 600.0,
+          "mase": 0.7363491084352288,
+          "pinball": 1.0146365691355907,
+          "coverage80": 0.8635714285714285,
+          "coverage80_cal": 0.8268452380952381
+        },
+        "tft": {
+          "wape": 0.38413915253267317,
+          "bias": -0.10439730158910615,
+          "series_scored": 600.0,
+          "mase": 0.6903193864261018,
+          "pinball": 0.9740840783388284,
+          "coverage80": 0.8033928571428571,
+          "coverage80_cal": 0.8360119047619048
+        }
+      },
+      "stat_seconds": 163.06,
+      "lightgbm_seconds": 12.18,
+      "tft_seconds": 195.55
+    },
+    {
+      "fold": 2,
+      "cutoff": "2025-12-03",
+      "start": "2025-12-04",
+      "end": "2025-12-31",
+      "series": 600,
+      "series_skipped": 0,
+      "models": {
+        "seasonal_naive": {
+          "wape": 0.5295437444421643,
+          "bias": -0.0637936931390656,
+          "series_scored": 600.0,
+          "mase": 1.0113139629519208,
+          "pinball": 1.4820566803184405,
+          "coverage80": 0.9266071428571429,
+          "coverage80_cal": 0.8471428571428572
+        },
+        "auto_ets": {
+          "wape": 0.39396033594969276,
+          "bias": -0.06717346149651192,
+          "series_scored": 600.0,
+          "mase": 0.7703010456728521,
+          "pinball": 1.1053746040372199,
+          "coverage80": 0.8216666666666667,
+          "coverage80_cal": 0.8156547619047619
+        },
+        "lightgbm_tweedie": {
+          "wape": 0.3949000498764043,
+          "bias": -0.013624729566980796,
+          "series_scored": 600.0,
+          "mase": 0.7776634030542043,
+          "pinball": 1.0906456268145637,
+          "coverage80": 0.8711309523809524,
+          "coverage80_cal": 0.8396428571428571
+        },
+        "tft": {
+          "wape": 0.388161811803918,
+          "bias": -0.09926163763356045,
+          "series_scored": 600.0,
+          "mase": 0.7486055148590489,
+          "pinball": 1.0716358292937909,
+          "coverage80": 0.7922023809523809,
+          "coverage80_cal": 0.794702380952381
+        }
+      },
+      "stat_seconds": 173.22,
+      "lightgbm_seconds": 14.21,
+      "tft_seconds": 198.32
+    }
+  ],
+  "summary_mean_over_folds": {
+    "seasonal_naive": {
+      "wape": 0.5355330501601921,
+      "bias": -0.05102322219407717,
+      "series_scored": 600.0,
+      "mase": 0.993075118079076,
+      "pinball": 1.4563876525394608,
+      "coverage80": 0.926845238095238,
+      "coverage80_cal": 0.8617261904761905
+    },
+    "auto_ets": {
+      "wape": 0.39981048324423063,
+      "bias": -0.02944836298840145,
+      "series_scored": 600.0,
+      "mase": 0.7604094029711779,
+      "pinball": 1.072904063379215,
+      "coverage80": 0.8266269841269841,
+      "coverage80_cal": 0.8260416666666667
+    },
+    "lightgbm_tweedie": {
+      "wape": 0.40136042603325744,
+      "bias": -0.004043234648209618,
+      "series_scored": 600.0,
+      "mase": 0.7683436939233877,
+      "pinball": 1.0686969889752453,
+      "coverage80": 0.8648214285714285,
+      "coverage80_cal": 0.8332440476190477
+    },
+    "tft": {
+      "wape": 0.3921037834520497,
+      "bias": -0.1127571147256194,
+      "series_scored": 600.0,
+      "mase": 0.733844014013933,
+      "pinball": 1.0450332510090385,
+      "coverage80": 0.7900595238095237,
+      "coverage80_cal": 0.8153571428571429
+    }
+  },
+  "runtime_seconds": 1112.6,
+  "python": "3.12.10"
+}
